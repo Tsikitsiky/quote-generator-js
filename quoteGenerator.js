@@ -18,7 +18,7 @@ const thirdQuotes = [
     "you have enough knowledge to achieve it",
     "remember your strenght"
 ]
-    
+    // new quotation generator for the user to choose from where they want the quote.
 let scdQuotesGen = {
     firstQuotes: [
         "Hard and harder",
@@ -41,7 +41,7 @@ let scdQuotesGen = {
 }
 
 
-// function which uses random number to search for a quote in each array.
+// functions which use random number to search for a quote in each arrays.
 function quotesGenerator() {
     let firstRandomNumber = Math.floor(Math.random() * firstQuotes.length);
     let scdRandomNumber = Math.floor(Math.random() * scdQuotes.length);
@@ -59,19 +59,21 @@ function quotesGenerator2() {
     let newQuotes = scdQuotesGen.firstQuotes[firstRandomNumber] + " " + scdQuotesGen.scdQuotes[scdRandomNumber] + " " + scdQuotesGen.thirdQuotes[thirdRandomNumber] + ".";
     return newQuotes; // console a quote which include three sentences.
 }
-
-let chosenGen = prompt("Choose a generator a or b:");
-if (chosenGen === "a") {
-    console.log(multiples());
-} else if(chosenGen === "b"){
-    console.log(multiples2());
-} else {
-    console.log("Invalid choice");
+function choice() {
+    let chosenGen = prompt("Choose a generator a or b:"); // the user is asked to choose from which generator they want the quotes
+    if (chosenGen === "a") {
+        multiples();
+    } else if(chosenGen === "b"){
+        multiples2();
+    } else {
+        console.log("Invalid choice");
+    }
 }
 
-function multiples(){
-    let quotesNumber = prompt("Enter a number of quotes you want between 1 and 5:");//  User choose the number of quotes between 1-5
+choice();
 
+function multiples(){ //  User choose the number of quotes between 1-5
+    let quotesNumber = prompt("Enter a number of quotes you want between 1 and 5:");
     for(i = 0; i < quotesNumber; i++) { // a for loop which iterate the quotes depending on the nuber that the user set
         if(quotesNumber >= 1 && quotesNumber <= 5) {
         console.log(quotesGenerator());
@@ -81,7 +83,7 @@ function multiples(){
     }
 }
 
-function multiples2() {
+function multiples2() { //  User choose the number of quotes between 1-5
         let quotesNumber2 = prompt("Enter a number of quotes you want between 1 and 5:");//  User choose the number of quotes between 1-5
         for(i = 0; i < quotesNumber2; i++) { // a for loop which iterate the quotes depending on the nuber that the user set
             if(quotesNumber2 >= 1 && quotesNumber2 <= 5) {
@@ -91,3 +93,10 @@ function multiples2() {
         }
     }
 }
+
+let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
+if (moreQuote === "yes") {
+    choice();
+    } else {
+        alert("Thank you")
+    }
