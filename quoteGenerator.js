@@ -27,19 +27,15 @@ function quotesGenerator() {
     let newQuotes = firstQuotes[firstRandomNumber] + " " + scdQuotes[scdRandomNumber] + " " +thirdQuotes[thirdRandomNumber] + ".";
     return newQuotes; // console a quote which include three sentences.
 }
-console.log(quotesGenerator());
 
-/*
 let quotesNumber = prompt("Enter a number of quotes you want between 1 and 5:");//  User choose the number of quotes between 1-5
-
+    
         for(i = 0; i < quotesNumber; i++) { // a for loop which iterate the quotes depending on the nuber that the user set
-        
         if(quotesNumber >= 1 && quotesNumber <=5) {
-        multipleQuotes = quotesGenerator();
+        let multipleQuotes = quotesGenerator();
         console.log(multipleQuotes);
         } else {
         console.log(`Invalid number, enter a number between 1 and 5`);
     }
 }
-    */
-
+    
