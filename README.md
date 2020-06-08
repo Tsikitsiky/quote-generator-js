@@ -8,6 +8,10 @@ In order to achive it I :
 
 1. then created a prompt where the user can specify the number of quotes between 1 to 5 they want to see.
 
-1. finaly wanted to create a prompt to ask the user from which quote generator they want, as we can see I put them in comment as the time ended. I also created two objects of arrays but unforunatly I could not achieve it until the end.
+1. next I created an object which takes three arrays as properties, and a function that concatenates a new quotes from the arrays.
+
+1. after that I created a prompt which asks the user to choose a quote generator since there are two generators and console the quotes after the choice.
+
+1. I finally created a prompt that asks the user whether they want more quotes, and if they do, it goes back to ask for choosing a generator.
 
 

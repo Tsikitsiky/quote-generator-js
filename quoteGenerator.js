@@ -94,9 +94,13 @@ function multiples2() { //  User choose the number of quotes between 1-5
     }
 }
 
+function askMoreQuotes() {
 let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
 if (moreQuote === "yes") {
     choice();
     } else {
         alert("Thank you")
     }
+}
+
+askMoreQuotes();
