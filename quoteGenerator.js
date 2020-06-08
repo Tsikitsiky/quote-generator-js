@@ -1,24 +1,24 @@
 console.log('it works!');
 //create two array of object to store the quotes.
 let firstQuotesGen = {
-  firstQuotes: [
+    firstQuotes: [
     "Risks must be taken",
     "Practice failure is the best way to learn",
     "You can do it"
-],
+    ],
 
-  scdQuotes: [
+    scdQuotes: [
     "the people who risk nothing do nothing",
     "try first",
     "no matter how hard life is stay calm",
     "God is always on your side"
-],
+    ],
 
-  thirdQuotes: [
+    thirdQuotes: [
     "do not forget to pray",
     "you have enough knowledge to achieve it",
     "remember your strenght"
-]
+    ]
 }
 
     // new quotation generator for the user to choose from where they want the quote.
@@ -29,14 +29,14 @@ let scdQuotesGen = {
         "Don't give up"
     ],
     
-     scdQuotes: [
+    scdQuotes: [
         "try hard",
         "stay focused",
         "take your time",
         "take a seat and think"
     ],
     
-     thirdQuotes: [
+    thirdQuotes: [
         "you are so brave",
         "time doesn't wait",
         "go faster don't look back"
@@ -59,9 +59,10 @@ function quotesGenerator(object) {
     let scdRandomNumber = Math.floor(Math.random() * object.scdQuotes.length);
     let thirdRandomNumber = Math.floor(Math.random() * object.thirdQuotes.length);
     // create a variable which concatenates the three quotes into one quote.
-    let newQuotes = object.firstQuotes[firstRandomNumber] + " " + object.scdQuotes[scdRandomNumber] + " " + object.thirdQuotes[thirdRandomNumber] + ".";
+    let newQuotes = object.firstQuotes[firstRandomNumber] + " " + object.scdQuotes              [scdRandomNumber] + " " + object.thirdQuotes[thirdRandomNumber] + ".";
     return newQuotes; // console a quote which include three sentences.
 }
+
 function choice() {
     let chosenGen = prompt("Choose a generator a or b:"); // the user is asked to choose from which generator they want the quotes
     if (chosenGen === "a") {
@@ -99,8 +100,8 @@ function multiples(object){ //  User choose the number of quotes between 1-5
 */
 
 function askMoreQuotes() {
-let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
-if (moreQuote === "yes") {
+    let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
+    if (moreQuote === "yes") {
     choice();
     } else if(moreQuote === "no") {
         alert("Thank you")
