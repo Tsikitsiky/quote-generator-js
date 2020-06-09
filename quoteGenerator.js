@@ -72,6 +72,11 @@ function choice() {
     } else {
         alert("Invalid choice");
     }
+
+    let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
+    while (moreQuote === "yes") {
+    choice();
+    } ;
 }
 
 choice();
@@ -99,15 +104,13 @@ function multiples(object){ //  User choose the number of quotes between 1-5
 }
 */
 
-function askMoreQuotes() {
-    let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
-    if (moreQuote === "yes") {
-    choice();
-    } else if(moreQuote === "no") {
-        alert("Thank you")
-    } else {
-        alert("Wrong choice")
-    }
-}
 
-askMoreQuotes();
+/*
+function askMoreQuotes(){
+    let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
+    while (moreQuote !== "no") {
+    choice();
+    askMoreQuotes();
+    } alert("Thank you")
+}
+*/
