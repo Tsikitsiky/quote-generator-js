@@ -63,6 +63,10 @@ function quotesGenerator(object) {
     return newQuotes; // console a quote which include three sentences.
 }
 
+
+
+
+
 function choice() {
     let chosenGen = prompt("Choose a generator a or b:"); // the user is asked to choose from which generator they want the quotes
     if (chosenGen === "a") {
@@ -72,11 +76,8 @@ function choice() {
     } else {
         alert("Invalid choice");
     }
+    askMoreQuotes();
 
-    let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
-    while (moreQuote === "yes") {
-    choice();
-    } ;
 }
 
 choice();
@@ -104,13 +105,14 @@ function multiples(object){ //  User choose the number of quotes between 1-5
 }
 */
 
-
-/*
 function askMoreQuotes(){
     let moreQuote = prompt("Do you want more quotes? yes or no:") // Ask whether the user want to get more quotes
-    while (moreQuote !== "no") {
+    if (moreQuote === "yes") {
     choice();
-    askMoreQuotes();
-    } alert("Thank you")
+    } else if(moreQuote === "no"){
+        alert("Thank you");
+    } else {
+        alert("Wrong choice");
+    }
 }
-*/
+
